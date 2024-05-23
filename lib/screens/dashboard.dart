@@ -42,11 +42,11 @@ class DashboardScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 50,
                 ),
-                Text('Drawer Content'),
-                Spacer(),
+                const Text('Drawer Content'),
+                const Spacer(),
                 ElevatedButton(
                   onPressed: () {
                     // Handle button 1 press
@@ -57,7 +57,7 @@ class DashboardScreen extends StatelessWidget {
                     );
                   },
                   style: ElevatedButton.styleFrom(
-                    side: BorderSide(color: kPrimaryLightColor),
+                    side: const BorderSide(color: kPrimaryLightColor),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10.0)),
                     backgroundColor: kPrimaryDarkColor,
@@ -67,7 +67,7 @@ class DashboardScreen extends StatelessWidget {
                     style: TextStyle(color: kPrimaryLightColor),
                   ),
                 ),
-                SizedBox(height: 100.0),
+                const SizedBox(height: 100.0),
               ],
             ),
           ),
@@ -86,6 +86,14 @@ class DashboardScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            const Text(
+              'Welcome to Productive Hour',
+              style: TextStyle(
+                  color: kPrimaryDarkColor,
+                  fontSize: 22,
+                  fontWeight: FontWeight.w500),
+            ),
+            const SizedBox(height: 80),
             Container(
               padding:
                   const EdgeInsets.symmetric(horizontal: 30.0, vertical: 100.0),
@@ -101,7 +109,7 @@ class DashboardScreen extends StatelessWidget {
                 children: [
                   Text(
                     user,
-                    style: TextStyle(fontSize: 30.0),
+                    style: const TextStyle(fontSize: 30.0),
                   ),
                   SizedBox(height: MediaQuery.of(context).size.height * 0.09),
                   Row(
@@ -116,7 +124,7 @@ class DashboardScreen extends StatelessWidget {
                             Navigator.pushNamed(context, '/task');
                           },
                           style: ElevatedButton.styleFrom(
-                            side: BorderSide(color: kPrimaryLightColor),
+                            side: const BorderSide(color: kPrimaryLightColor),
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10.0)),
                             backgroundColor: kPrimaryDarkColor,
@@ -137,7 +145,7 @@ class DashboardScreen extends StatelessWidget {
                             Navigator.pushNamed(context, '/project');
                           },
                           style: ElevatedButton.styleFrom(
-                            side: BorderSide(color: kPrimaryLightColor),
+                            side: const BorderSide(color: kPrimaryLightColor),
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10.0)),
                             backgroundColor: kPrimaryDarkColor,
@@ -153,8 +161,8 @@ class DashboardScreen extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
-              height: 100.0,
+            const SizedBox(
+              height: 150.0,
             ),
           ],
         ),

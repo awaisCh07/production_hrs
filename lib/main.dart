@@ -19,11 +19,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // title: 'PRD',
-      // theme: ThemeData(
-      //   colorScheme: ColorScheme.fromSeed(seedColor: kPrimaryDarkColor),
-      //   useMaterial3: true,
-      // ),
+      title: 'PRD',
+      theme: ThemeData(
+        fontFamily: 'Poppins',
+        // colorScheme: ColorScheme.fromSeed(seedColor: kPrimaryDarkColor),
+        // useMaterial3: true,
+      ),
       home: FutureBuilder(
         future: Future.delayed(const Duration(seconds: 3)),
         builder: (context, snapshot) {
